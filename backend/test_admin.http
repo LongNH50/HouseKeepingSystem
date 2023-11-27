@@ -1,0 +1,38 @@
+
+POST http://localhost:3000/admin/signup
+Content-Type: application/json
+
+{
+	"email": "dangtu.nguyen@miu.edu",
+	"password": "123"
+}
+
+###
+
+POST http://localhost:3000/admin/signup
+Content-Type: application/json
+
+{
+	"email": "hoanglong.nguyen@miu.edu",
+	"password": "123"
+}
+###
+
+POST http://localhost:3000/admin/login
+Content-Type: application/json
+
+{
+	"email": "hoanglong.nguyen@miu.edu",
+	"password": "123"
+}
+
+
+
+###
+POST http://localhost:3000/admin/login
+Content-Type: application/json
+
+{
+	"email": "dangtu.nguyen@miu.edu",
+	"password": "123"
+}

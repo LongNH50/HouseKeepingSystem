@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="./booking.component.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert alert-success" role="alert" [hidden]="!isAdded">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Booking successfully</p>
+        <hr />
+      </div>
+      <div class="title">Booking House Keeper</div>
+      <div class="content">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="user-details">
+            <div class="user-details" formGroupName="contract_details">
+              <div class="error" role="alert" [hidden]="!isInValidDate">
+                <p>{{ errorMessage }}</p>
+                <hr />
+              </div>
+              <div class="input-box">
+                <span class="details"
+                  >Start Date<span class="mandatory">*</span></span
+                >
+
+                <input
+                  type="date"
+                  placeholder="Enter Start Date"
+                  formControlName="start_date"
+                  (change)="onStartDateChange($event)"
+                  required
+                />
+
+                <small
+                  style="color: red"
+                  *ngIf="form.get('start_date')?.errors?.['required']&&form.get('start_date')?.touched"
+                >
+                  Start Date is required
+                </small>
+              </div>
+              <div class="input-box">
+                <span class="details"
+                  >End Date<span class="mandatory">*</span></span
+                >
+                <input
+                  type="date"
+                  placeholder="Enter End Date"
+                  formControlName="end_date"
+                  (change)="onEndDateChange($event)"
+                  required
+                />
+
+                <small
+                  style="color: red"
+                  *ngIf="form.get('end_date')?.errors?.['required']&&form.get('end_date')?.touched"
+                >
+                  End Date is required
+                </small>
+              </div>
+              <div class="input-box">
+                <span class="details">Name </span>
+                <input
+                  [readonly]="true"
+                  type="text"
+                  placeholder="Enter number"
+                  formControlName="house_owner_name"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <span class="details">Total Price</span>
+                <input
+                  [readonly]="true"
+                  type="text"
+                  placeholder="Total Price"
+                  formControlName="total_price"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Name</span>
+              <input
+                type="text"
+                [readonly]="true"
+                placeholder="Enter your name"
+                formControlName="name"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                [readonly]="true"
+                type="text"
+                placeholder="Enter your email"
+                formControlName="email"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Hourly Rate</span>
+              <input
+                [readonly]="true"
+                type="text"
+                placeholder="Enter Hourly Rate"
+                formControlName="hourly_rate"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                [readonly]="true"
+                type="text"
+                placeholder="Enter Phone Number"
+                formControlName="phone_number"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Year of Experience</span>
+              <input
+                [readonly]="true"
+                type="number"
+                placeholder="Enter your password"
+                formControlName="year_of_experience"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Language</span>
+              <input
+                [readonly]="true"
+                type="text"
+                placeholder="Enter Language"
+                formControlName="language"
+                required
+              />
+            </div>
+          </div>
+
+          <div _ngcontent-xhg-c12="" class="button">
+            <input
+              _ngcontent-xhg-c12=""
+              type="button"
+              (click)="cancel()"
+              value="Cancel"
+            />
+            <input
+              _ngcontent-xhg-c12=""
+              type="submit"
+              value="Book"
+              [disabled]="!form.valid"
+            />
+          </div>
+          <!-- </div> -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

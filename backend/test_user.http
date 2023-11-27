@@ -1,0 +1,126 @@
+
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyODMzMDZ9.U-43q2ITcOTmq-rQ0T8BqugQodCafscbSAhUttXHzTU
+
+###
+GET http://localhost:3000/users/644215bf62e8873bdd5a32b7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2JkMWFiYjlhYTA4NWRiZGJmNWIiLCJuYW1lIjoiU2FrYSIsInBob25lX251bWJlciI6IjU1NS01Njc4IiwiZW1haWwiOiJTYWthQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIiLCJhZGRyZXNzIjp7InN0cmVldCI6IjQ1NiBPYWsgU3QiLCJjaXR5IjoiU21hbGx2aWxsZSIsInN0YXRlIjoiV0EiLCJ6aXAiOiI5ODc2NSIsImxvY2F0aW9uIjpbNDcuNzUxMSwtMTIwLjc0MDFdfSwiY29udHJhY3RfZGV0YWlscyI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjNUMTg6NDE6MjEuMTY2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDQtMjNUMTg6NDE6MjEuMTY2WiIsIl9fdiI6MCwiaWF0IjoxNjgyMjc1MzEwfQ.t_cJrNsoNEYH_oUGhUxccNvPu2OlwZO-cujhm04xD7g
+
+
+###
+POST http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQyOTY2ODhiMjgwYWU0OTlkOTZiMGQiLCJuYW1lIjoiU2FrYSIsInBob25lX251bWJlciI6IjU1NS01Njc4IiwiZW1haWwiOiJTYWthQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIiLCJhZGRyZXNzIjp7InN0cmVldCI6IjQ1NiBPYWsgU3QiLCJjaXR5IjoiU21hbGx2aWxsZSIsInN0YXRlIjoiV0EiLCJ6aXAiOiI5ODc2NSIsImxvY2F0aW9uIjpbNDcuNzUxMSwtMTIwLjc0MDFdfSwiY29udHJhY3RfZGV0YWlscyI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjFUMTM6NTg6MDAuNzAxWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDQtMjFUMTM6NTg6MDAuNzAxWiIsIl9fdiI6MCwiaWF0IjoxNjgyMjI2ODI3fQ.kbgF1Vp_AaIG1ApoNgBpQ6RgxiRMgcZwMpQF3u-B7bw
+
+Content-Type: application/json
+
+{
+    "name": "Saka",
+    "phone_number": "555-5678",
+    "email": "Saka@example.com",
+    "password": "p@ssw0rd",
+    "address": {
+        "street": "456 Oak St",
+        "city": "Smallville",
+        "state": "WA",
+        "zip": "98765",
+        "location": [47.7511, -120.7401]
+    },
+    "contract_details": [
+    ]
+}
+
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "hoanglo222ng.nguyen@miu.edu",
+    "password": "123"
+}
+
+
+
+###
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+    "name": "Charlie123",
+    "phone_number": "555-9012",
+    "email": "charlie123@example.com",
+    "password": "p@ssw0rd",
+    "address": {
+        "street": "789 Elm St",
+        "city": "Big City",
+        "state": "NY",
+        "zip": "54321",
+        "location": [40.7128, -74.0060]
+    },
+    "contract_details": []
+}
+
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+
+{
+    "name": "David Garcia",
+    "phone_number": "555-5678",
+    "email": "david@example.com",
+    "password": "1",
+    "address": {
+        "street": "456 Oak St",
+        "city": "Somewhere",
+        "state": "NY",
+        "zip": "67890",
+        "location": [40.7128, -74.0060]
+    },
+    "availability": true,
+    "hourly_rate": 20,
+    "year_of_experience": 3,
+    "language": "Spanish",
+    "contract_details": [
+    ]
+}
+
+
+###
+PATCH   http://localhost:3000/users/64457bd1abb9aa085dbdbf5b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2JkMWFiYjlhYTA4NWRiZGJmNWIiLCJuYW1lIjoiU2FrYSIsInBob25lX251bWJlciI6IjU1NS01Njc4IiwiZW1haWwiOiJTYWthQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIiLCJhZGRyZXNzIjp7InN0cmVldCI6IjQ1NiBPYWsgU3QiLCJjaXR5IjoiU21hbGx2aWxsZSIsInN0YXRlIjoiV0EiLCJ6aXAiOiI5ODc2NSIsImxvY2F0aW9uIjpbNDcuNzUxMSwtMTIwLjc0MDFdfSwiY29udHJhY3RfZGV0YWlscyI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjNUMTg6NDE6MjEuMTY2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDQtMjNUMTg6NDE6MjEuMTY2WiIsIl9fdiI6MCwiaWF0IjoxNjgyMjc1MzEwfQ.t_cJrNsoNEYH_oUGhUxccNvPu2OlwZO-cujhm04xD7g
+
+
+{
+    "title": "New_Spaghetti"
+
+}
+
+
+###
+DELETE http://localhost:3000/users/64457bd1abb9aa085dbdbf5b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2JkMWFiYjlhYTA4NWRiZGJmNWIiLCJuYW1lIjoiU2FrYSIsInBob25lX251bWJlciI6IjU1NS01Njc4IiwiZW1haWwiOiJTYWthQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIiLCJhZGRyZXNzIjp7InN0cmVldCI6IjQ1NiBPYWsgU3QiLCJjaXR5IjoiU21hbGx2aWxsZSIsInN0YXRlIjoiV0EiLCJ6aXAiOiI5ODc2NSIsImxvY2F0aW9uIjpbNDcuNzUxMSwtMTIwLjc0MDFdfSwiY29udHJhY3RfZGV0YWlscyI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjNUMTg6NDE6MjEuMTY2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDQtMjNUMTg6NDE6MjEuMTY2WiIsIl9fdiI6MCwiaWF0IjoxNjgyMjc1MzEwfQ.t_cJrNsoNEYH_oUGhUxccNvPu2OlwZO-cujhm04xD7g
+
+
+
+###
+patch http://localhost:3000/users/6445a2e3d6b5b258e99ddcba
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1YTJlM2Q2YjViMjU4ZTk5ZGRjYmEiLCJuYW1lIjoibmd1eWVuIGhvYW5nIGxvbmciLCJwaG9uZV9udW1iZXIiOiI2NDEyMzM5MzIyIiwiZW1haWwiOiJob2FuZ2xvMjIybmcubmd1eWVuQG1pdS5lZHUiLCJwYXNzd29yZCI6IiIsImFkZHJlc3MiOnsic3RyZWV0IjoiRmFpcmZpZWxkLCBJb3dhIiwiY2l0eSI6IkFzaWFuLCBBc2lhbiBBbWVyaWNhbiBvciBQYWNpZmljIElzbGFuZGVyIiwic3RhdGUiOiJJb3dhIiwiemlwIjoiNTI1NTciLCJsb2NhdGlvbiI6WzEyM119LCJjb250cmFjdF9kZXRhaWxzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QyMToyODowMy4xNzFaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QyMToyODowMy4xNzFaIiwiX192IjowLCJpYXQiOjE2ODIzMDY4Njl9.a9ddIOAgguHUjyQ8XLi-zcbqJT6y99ypjo-XyEMfY88
+Content-Type: application/json
+
+{
+    "name": "Aaron",
+    "phone_number": "555-1234",
+    "email": "hoanglo222ng.nguyen@miu.edu",
+    "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+    } 
+}
+
+###
+GET http://localhost:3000/users/6445a2e3d6b5b258e99ddcba
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1YTJlM2Q2YjViMjU4ZTk5ZGRjYmEiLCJuYW1lIjoibmd1eWVuIGhvYW5nIGxvbmciLCJwaG9uZV9udW1iZXIiOiI2NDEyMzM5MzIyIiwiZW1haWwiOiJob2FuZ2xvMjIybmcubmd1eWVuQG1pdS5lZHUiLCJwYXNzd29yZCI6IiIsImFkZHJlc3MiOnsic3RyZWV0IjoiRmFpcmZpZWxkLCBJb3dhIiwiY2l0eSI6IkFzaWFuLCBBc2lhbiBBbWVyaWNhbiBvciBQYWNpZmljIElzbGFuZGVyIiwic3RhdGUiOiJJb3dhIiwiemlwIjoiNTI1NTciLCJsb2NhdGlvbiI6WzEyM119LCJjb250cmFjdF9kZXRhaWxzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QyMToyODowMy4xNzFaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QyMToyODowMy4xNzFaIiwiX192IjowLCJpYXQiOjE2ODIzMDY4Njl9.a9ddIOAgguHUjyQ8XLi-zcbqJT6y99ypjo-XyEMfY88

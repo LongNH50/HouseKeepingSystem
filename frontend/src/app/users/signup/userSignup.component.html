@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="./userSignup.component.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!--<title>Responsive Regisration Form </title>-->
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration New Account</header>
+
+      <form [formGroup]="form" (ngSubmit)="signup()">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Personal Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  formControlName="name"
+                  required
+                />
+
+                <small
+                  style="color: red"
+                  *ngIf="form.get('name')?.errors?.['required']&&form.get('name')?.touched"
+                >
+                  Name is required
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>Phone Number</label>
+                <input
+                  type="text"
+                  placeholder="Enter Phone Number"
+                  formControlName="phone_number"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('phone_number')?.errors?.['required']&&form.get('phone_number')?.touched"
+                >
+                  Phone Number is required
+                </small>
+                <small
+                  style="color: red"
+                  *ngIf="form.get('phone_number')?.errors?.['pattern']&&form.get('phone_number')?.touched"
+                >
+                  Phone Number must have 10-14 digits
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>Email</label>
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  formControlName="email"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('email')?.errors?.['required']&& form.get('email')?.touched"
+                  >Email is required
+                </small>
+                <small
+                  style="color: red"
+                  *ngIf="form.get('email')?.errors?.['email']&& form.get('email')?.touched"
+                  >Email invalid
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  formControlName="password"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('password')?.errors?.['required']&&form.get('password')?.touched"
+                >
+                  Password is required
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="details ID" formGroupName="address">
+            <span class="title">Address</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Street</label>
+                <input
+                  type="text"
+                  placeholder="Enter Street"
+                  formControlName="street"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.street')?.errors?.['required']&&form.get('address.street')?.touched"
+                >
+                  Street is required
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>City</label>
+
+                <input
+                  type="text"
+                  placeholder="Enter City"
+                  formControlName="city"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.city')?.errors?.['required']&&form.get('address.city')?.touched"
+                >
+                  City is required
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>State</label>
+                <input
+                  type="text"
+                  placeholder="Enter State"
+                  formControlName="state"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.state')?.errors?.['required']&&form.get('address.state')?.touched"
+                >
+                  State is required
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>Zip Code</label>
+                <input
+                  type="text"
+                  placeholder="Enter Zip Code"
+                  formControlName="zip"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.zip')?.errors?.['required']&&form.get('address.zip')?.touched"
+                >
+                  Zip is required
+                </small>
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.zip')?.errors?.['pattern']&&form.get('address.zip')?.touched"
+                >
+                  Zip must have 5 digits
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>Location - Long</label>
+                <input
+                  type="number"
+                  placeholder="Enter Location - Long"
+                  formControlName="location"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.location.long')?.errors?.['required']&&form.get('address.location.long')?.touched"
+                >
+                  location is required
+                </small>
+              </div>
+
+              <div class="input-field">
+                <label>Location - Lat</label>
+                <input
+                  type="number"
+                  placeholder="Enter Location - Lat"
+                  formControlName="location"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.location.long')?.errors?.['required']&&form.get('address.location.long')?.touched"
+                >
+                  location is required
+                </small>
+              </div>
+            </div>
+
+            <button class="nextBtn" type="submit" [disabled]="form.invalid">
+              <span class="btnText">Create</span>
+              <i class="uil uil-navigator"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!--<script src="script.js"></script>-->
+  </body>
+</html>

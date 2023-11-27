@@ -1,0 +1,123 @@
+
+GET http://localhost:3000/houseKeepers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+###
+GET http://localhost:3000/houseKeepers/64428ac9b877b5b1ce22e56a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+
+###
+POST http://localhost:3000/houseKeepers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+Content-Type: application/json
+
+{
+    "name": "Alice Smith",
+    "phone_number": "555-1234",
+    "email": "alice@example.com",
+    "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345",
+        "location": [34.0522, -118.2437]
+    },
+    "availability": true,
+    "hourly_rate": 15,
+    "year_of_experience": 2,
+    "language": "English",
+    "contract_details": [
+    ]
+}
+
+###
+POST http://localhost:3000/houseKeepers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+Content-Type: application/json
+
+{
+    "name": "Emily Chen",
+    "phone_number": "555-9012",
+    "email": "emily@example.com",
+    "address": {
+        "street": "789 Pine St",
+        "city": "Anywhere",
+        "state": "CA",
+        "zip": "45678",
+        "location": [37.7749, -122.4194]
+    },
+    "availability": false,
+    "hourly_rate": 25,
+    "year_of_experience": 5,
+    "language": "Mandarin",
+    "contract_details": []
+}
+
+
+###
+POST http://localhost:3000/houseKeepers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+Content-Type: application/json
+
+
+{
+    "name": "David Garcia",
+    "phone_number": "555-5678",
+    "email": "david@example.com",
+    "address": {
+        "street": "456 Oak St",
+        "city": "Somewhere",
+        "state": "NY",
+        "zip": "67890",
+        "location": [40.7128, -74.0060]
+    },
+    "availability": true,
+    "hourly_rate": 20,
+    "year_of_experience": 3,
+    "language": "Spanish",
+    "contract_details": [
+    ]
+}
+
+
+###
+PATCH   http://localhost:3000/houseKeepers/6435c85ecf1c34c22ef66c8e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+
+{
+    "title": "New_Spaghetti"
+
+}
+
+
+###
+DELETE http://localhost:3000/houseKeepers/644207e3ee12810e4c6aeafe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+
+
+###
+patch  http://localhost:3000/houseKeepers/64428ac9b877b5b1ce22e56a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE
+Content-Type: application/json
+
+{
+    "name": "Alice Smith123",
+    "phone_number": "555-1234",
+    "email": "alice222@example.com",
+    "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345",
+         "location": [40.7128, -74.0060]
+    },
+    "availability": false,
+    "hourly_rate": 15,
+    "year_of_experience": 20,
+    "language": "English",
+    "contract_details": [
+    ]
+}
+###
+GET http://localhost:3000/houseKeepers/64428ac9b877b5b1ce22e56a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1N2NmYWNjNzMyMDAyYTI5Y2YyYjkiLCJlbWFpbCI6ImhvYW5nbG9uZy5uZ3V5ZW5AbWl1LmVkdSIsInBhc3N3b3JkIjoiIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwidXBkYXRlZEF0IjoiMjAyMy0wNC0yM1QxODo0NjoxOC41MjRaIiwiX192IjowLCJpYXQiOjE2ODIyNzU1ODZ9.R1_5SY-7DWsGYzrFg5keK5RvLacMTTqgVVmAvJOawLE

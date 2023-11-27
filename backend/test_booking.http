@@ -1,0 +1,12 @@
+###
+patch  http://localhost:3000/users/644593d8b38663690e93389e/booking
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ1OTNkOGIzODY2MzY5MGU5MzM4OWUiLCJuYW1lIjoiU2FrYSIsInBob25lX251bWJlciI6IjU1NS01Njc4IiwiZW1haWwiOiJTYWthQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIiLCJhZGRyZXNzIjp7InN0cmVldCI6IjQ1NiBPYWsgU3QiLCJjaXR5IjoiU21hbGx2aWxsZSIsInN0YXRlIjoiV0EiLCJ6aXAiOiI5ODc2NSIsImxvY2F0aW9uIjpbNDcuNzUxMSwtMTIwLjc0MDFdfSwiY29udHJhY3RfZGV0YWlscyI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjNUMjA6MjM6NTIuNzI5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDQtMjNUMjA6MjM6NTIuNzI5WiIsIl9fdiI6MCwiaWF0IjoxNjgyMjgxNTIzfQ.4WmSQYU00F7fR1GMuG-TEuAFFAJYUkeZnJfJ_UgaAp4
+Content-Type: application/json
+
+{
+    "house_keeper_id": "64459413b38663690e9338a9",
+    "house_keeper_name": "Alice Smith",
+    "start_date": "2023-05-15",
+    "end_date": "2023-05-16",
+    "total_price": 100
+}

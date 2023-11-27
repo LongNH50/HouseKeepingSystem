@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="./add.component.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Add New House Keeper</div>
+      <div class="content">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Name</span>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                formControlName="name"
+                required
+              />
+              <small
+                style="color: red"
+                *ngIf="form.get('name')?.errors?.['required']&&form.get('name')?.touched"
+              >
+                Name is required
+              </small>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                type="text"
+                placeholder="Enter your email"
+                formControlName="email"
+                required
+              />
+              <small
+                style="color: red"
+                *ngIf="form.get('email')?.errors?.['required']&& form.get('email')?.touched"
+                >Email is required
+              </small>
+              <small
+                style="color: red"
+                *ngIf="form.get('email')?.errors?.['email']&& form.get('email')?.touched"
+                >Email invalid
+              </small>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Hourly Rate</span>
+              <input
+                type="number"
+                placeholder="Enter Hourly Rate"
+                formControlName="hourly_rate"
+                required
+              />
+              <small
+                style="color: red"
+                *ngIf="form.get('hourly_rate')?.errors?.['required']&&form.get('hourly_rate')?.touched"
+              >
+                Hourly Rate is required
+              </small>
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                type="text"
+                placeholder="Enter Phone Number"
+                formControlName="phone_number"
+                required
+              />
+              <small
+                style="color: red"
+                *ngIf="form.get('phone_number')?.errors?.['required']&&form.get('phone_number')?.touched"
+              >
+                Phone Number is required
+              </small>
+              <small
+                style="color: red"
+                *ngIf="form.get('phone_number')?.errors?.['pattern']&&form.get('phone_number')?.touched"
+              >
+                Phone Number must have 10-14 digits
+              </small>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Year of Experience</span>
+              <input
+                type="number"
+                placeholder="Enter your year"
+                formControlName="year_of_experience"
+                required
+              />
+              <small
+                style="color: red"
+                *ngIf="form.get('year_of_experience')?.errors?.['required']&&form.get('year_of_experience')?.touched"
+              >
+                Year is required
+              </small>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Language</span>
+              <input
+                type="text"
+                placeholder="Enter Language"
+                formControlName="language"
+                required
+              />
+              <small
+                style="color: red"
+                *ngIf="form.get('language')?.errors?.['required']&&form.get('language')?.touched"
+              >
+                Language is required
+              </small>
+            </div>
+
+            <div class="user-details" formGroupName="address">
+              <div class="input-box">
+                <span class="details">Street</span>
+
+                <input
+                  placeholder="Enter Street"
+                  type="text"
+                  formControlName="street"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.street')?.errors?.['required']&&form.get('address.street')?.touched"
+                >
+                  Street is required
+                </small>
+              </div>
+              <div class="input-box">
+                <span class="details">City </span>
+                <input
+                  type="text"
+                  placeholder="Enter City"
+                  formControlName="city"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.city')?.errors?.['required']&&form.get('address.city')?.touched"
+                >
+                  City is required
+                </small>
+              </div>
+              <div class="input-box">
+                <span class="details">State</span>
+                <input
+                  type="text"
+                  placeholder="Enter state"
+                  formControlName="state"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.state')?.errors?.['required']&&form.get('address.state')?.touched"
+                >
+                  State is required
+                </small>
+              </div>
+              <div class="input-box">
+                <span class="details">Zip</span>
+                <input
+                  type="text"
+                  placeholder="Enter zip"
+                  formControlName="zip"
+                  required
+                />
+                <small
+                  style="color: red"
+                  *ngIf="form.get('address.zip')?.errors?.['required']&&form.get('address.zip')?.touched"
+                >
+                  Zip is required
+                </small>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="gender-details"> -->
+          <label class="relative inline-flex items-center mb-4 cursor-pointer">
+            <input
+              type="checkbox"
+              value=""
+              class="sr-only peer"
+              formControlName="availability"
+            />
+            <div
+              class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+            ></div>
+            <span
+              class="ml-5 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Available</span
+            >
+          </label>
+          <!-- </div> -->
+          <div _ngcontent-xhg-c12="" class="button">
+            <input
+              _ngcontent-xhg-c12=""
+              type="button"
+              (click)="cancel()"
+              value="Cancel"
+            />
+            <input
+              _ngcontent-xhg-c12=""
+              type="submit"
+              value="Add"
+              [disabled]="form.invalid"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

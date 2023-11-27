@@ -1,0 +1,31 @@
+ng g c login --flat
+ng g c signup --flat
+ng g s state
+ng g s user
+ng g environments
+np
+npm install ngx-toastr -save
+npm install @angular/animations --save
+npm i jwt-decode
+npm i --save ag-grid-community ag-grid-angular
+ng g module housekeepers
+ng g c ./housekeepers/list --flat
+ng g c ./housekeepers/add --flat
+ng g c ./housekeepers/update --flat
+ng g c ./housekeepers/housekeeper --flat
+ng g s ./housekeepers/housekeepers
+ng g c ./housekeepers/booking --flat
+
+ng g interceptor addToken
+
+ng g module users
+ng g c ./users/list
+ng g c ./users/signup
+ng g c ./users/login
+ng g c ./users/update
+ng g c ./users/user
+ng g s ./users/users
+
+
+ng build
+http-server
